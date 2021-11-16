@@ -12,7 +12,7 @@ body {
     font-family: Orbitron;
 }
 
-
+/* main background */
 .game-background {
     background-image: url(/assests/images/rock-paper-scissors-background-image.png);
     background-repeat: no-repeat;
@@ -28,6 +28,7 @@ body {
     border-radius: 5%;
 }
 
+/* game display area */
 .heading {
     text-align: center;
     word-spacing: 20px;
@@ -54,6 +55,7 @@ body {
     padding: 0 3rem;
 }
 
+/* control panel area */
 .control-panel {
     text-align: center;
     padding: auto;
@@ -105,14 +107,62 @@ body {
     background-color: rgb(114, 217, 224);
 }
 
-.score-area{
+/* score area */
+.score-area {
     display: flex;
     justify-content: space-around;
-    margin-top: -69px ;
+    margin-top: -69px;
     text-align: center;
     margin-left: -86px;
     font-size: 19px;
 }
 
+/* --------- Media queries */
+
+@media screen and (max-width:768px) {
+    body {
+        margin: 0 -50px;
+    }
+}
 
 
+/* --------- Media queries */
+
+@media screen and (max-width:375px) {
+
+    .game-background {
+        background-image: url(/assests/images/iphone-background.png);
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    body {
+        margin: 0 -61;
+    }
+
+    .heading {
+        margin-top: -62 px;
+    }
+
+    .vs {
+        margin-top: 35%;
+        padding: 0 1rem;
+    }
+
+    .game-area{
+        margin-left:30px;
+    }
+
+    .control-panel{
+        margin-top:9em;
+        margin-right: 3px;
+    }
+
+    .score-area{
+        margin-left: 2px;
+        margin-top: 42px;
+
+    }
+
+
+}
