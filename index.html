@@ -25,11 +25,15 @@
 
         <div class="game-area">
 
-            <div class="display display-blue" id="user">user</div>
+            <div class="display display-blue" id="user">
+                <span id="user"></span>
+            </div>
             <div class="vs">
                 <h2>VS</h2>
             </div>
-            <div class="display display-red" id="Enemy">Enemy</div>
+            <div class="display display-red">
+                <span id="Enemy"></span>
+            </div>
 
         </div>
 
@@ -51,20 +55,17 @@
                     <img class="btn" src="assests/images/scissor-control-button.png" alt="hand scissor icon"></div>
             </button>
 
-
         </div>
 
         <div class="score-area">
-            <div>
-                <p class="score">WINS <span id="score">0</span></p>
-                <p class="score">Losses <span id="Losses">0</span></p>
+            <div class="user-score">
+                <p class="score">WINS <span id="user-score">0</span></p>
+                <p class="score">Losses <span id="user-losses">0</span></p>
             </div>
-            <div>
-                <span class="space"></span>
-            </div>
-            <div>
-                <p class="score">WINS <span id="score">0</span></p>
-                <p class="score">Losses <span id="Losses">0</span></p>
+            <div class="space"></div>
+            <div class="enemy-score">
+                <p class="score">WINS <span id="enemy-score">0</span></p>
+                <p class="score">Losses <span id="enemy-losses">0</span></p>
             </div>
         </div>
 
