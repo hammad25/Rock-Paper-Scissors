@@ -13,7 +13,7 @@ body {
 }
 
 
-.game-background{
+.game-background {
     background-image: url(/assests/images/rock-paper-scissors-background-image.png);
     background-repeat: no-repeat;
     box-sizing: border-box;
@@ -28,12 +28,12 @@ body {
     border-radius: 5%;
 }
 
-.heading{
+.heading {
     text-align: center;
     word-spacing: 20px;
 }
 
-.game-area{
+.game-area {
     display: flex;
     height: 30%;
     width: 80%;
@@ -42,25 +42,67 @@ body {
     margin-right: auto;
 }
 
-.display{
-    border: 10px groove rgb(19,78,139) ;
+.display {
+    border: 10px groove rgb(19, 78, 139);
     border-radius: 10%;
-    height: 120px;
+    height: 140px;
     width: 200px;
 }
 
-.vs{
+.vs {
     margin-top: 12%;
     padding: 0 3rem;
 }
 
+.control-panel {
+    text-align: center;
+    padding: auto;
+    margin-right: 70px;
+    margin-top: 3em;
+}
+
+.btn {
+    height: 100px;
+    width: 100px;
+}
+
+.button {
+    border-radius: 50%;
+    height: 100px;
+    width: 110px;
+    background-color: rgb(14, 65, 103);
 
 
+}
 
+.button-red {
+    background-color: rgb(14, 65, 103);
+    box-shadow: 7px 3px 7px 0px rgb(239, 84, 128, 0.29);
+}
 
+.button-red:active,
+.button-red:hover {
+    background-color: rgb(239, 84, 128);
+}
 
+.button-yellow {
+    background-color: rgb(14, 65, 103);
+    box-shadow: 7px 3px 7px 0px rgba(218, 192, 79, 0.29);
+}
 
+.button-yellow:active,
+.button-yellow:hover {
+    background-color: rgb(225, 222, 85);
+}
 
+.button-blue {
+    background-color: rgb(14, 65, 103);
+    box-shadow: 7px 3px 7px 0px rgb(114, 217, 224, 0.29);
+}
 
+.button-blue:active,
+.button-blue:hover {
+    background-color: rgb(114, 217, 224);
+}
 
 
