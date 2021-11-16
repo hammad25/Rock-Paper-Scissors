@@ -5,7 +5,28 @@
     margin: 0;
 }
 
+body {
+    background-color: black;
+    color: white;
+    background-repeat: no-repeat;
+    font-family: Orbitron;
+}
 
+
+.game-background{
+    background-image: url(/assests/images/rock-paper-scissors-background-image.png);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    padding: 1%;
+    border-radius: 5%;
+}
 
 
 
