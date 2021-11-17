@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Google font-->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Google font-->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Orbitron:wght@600;900&display=swap"
         rel="stylesheet">
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
 
     <!--CSS styel sheet-->
     <link rel="stylesheet" href="/assests/css/style.css">
@@ -18,6 +23,21 @@
 
 <body>
     <div class="game-background">
+
+        <!--Trigger rules modal-->
+        <button class="style-btn" id="js-btn">Rules <i class="fas fa-space-shuttle"></i></button>
+        <!--Rules Modal-->
+        <div id="rules-modal" class="style-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>How to save the galaxy</h3>
+                <p>Win 3 battle rounds to win the 1st War</p>
+                <h3>Final War</h3>
+                <p>You will have 3 seconds to fire your selected weapon and save the galaxy</p>
+                <h3>Goodluck solider</h3>
+            </div>
+        </div>
+
 
         <h1 class="heading">
             Rock Paper Scissors
@@ -40,7 +60,7 @@
 
         <div class="control-panel">
 
-            <button data-type="rock"  class="button button-red">
+            <button data-type="rock" class="button button-red">
                 <div id="rock">
                     <img class="btn" src="/assests/images/rock-control-button.png" alt="hand rock icon"></div>
             </button>
