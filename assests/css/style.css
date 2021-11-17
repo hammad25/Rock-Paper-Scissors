@@ -137,11 +137,11 @@ body {
     }
 
     body {
-        margin: 0 -61;
+        margin: 0 -30px;
     }
 
     .heading {
-        margin-top: -62 px;
+        margin-top: -62px;
     }
 
     .vs {
@@ -150,12 +150,17 @@ body {
     }
 
     .game-area{
-        margin-left:30px;
+        margin-left:10px;
+        width: 96%;
     }
 
     .control-panel{
         margin-top:9em;
         margin-right: 3px;
+    }
+
+    .button{
+        width: 95px;
     }
 
     .score-area{
