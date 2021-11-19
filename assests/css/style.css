@@ -17,20 +17,18 @@ body {
     background-size: cover;
     height: 100vh;
     width: 100%;
-
 }
 
 /* main background */
 .game-background {
-    margin: 1% 5% 20% 5%;
-    padding: 5%;
+    margin: 1% 5% 0% 5%;
 }
 
 /* game display area */
 .heading {
     text-align: center;
     word-spacing: 22px;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .game-area {
@@ -45,7 +43,7 @@ body {
 .style-btn {
     font-family: 'Orbitron';
     text-transform: uppercase;
-    margin: 13px 10px 0px 65px;
+    margin: 13px 10px 0px 30px;
     width: 139px;
     height: 48px;
     position: absolute;
@@ -59,8 +57,8 @@ body {
 .display {
     border: 15px groove rgb(255, 255, 255);
     border-radius: 10%;
-    height: 430px;
-    width: 420px;
+    height: 250px;
+    width: 300px;
     box-shadow: 20px 20px 20px 0px rgb(0, 0, 0);
 }
 
@@ -69,8 +67,8 @@ body {
 }
 
 .vs {
-    margin: -70px 47%;
-    font-size: 50px;
+    margin: -70px 45%;
+    font-size: 45px;
 
 }
 
@@ -177,7 +175,7 @@ body {
         width: 120px;
     }
 
-    .btn{
+    .btn {
         width: 100px;
         height: 100px;
     }
@@ -196,25 +194,18 @@ body {
 
 @media screen and (max-width:375px) {
 
-    .game-background {
-        background-image: url(/assests/images/iphone-background.png);
-        background-repeat: no-repeat;
-        text-align: center;
-    }
-
-    body {
-        margin: 0 -30px;
-    }
-
     .heading {
         margin-top: -62px;
+        font-size: 20px;
     }
 
     .style-btn {
         font-family: 'Orbitron';
-        margin: -27px -182px;
-        width: 60px;
+        width: 50px;
         position: absolute;
+        margin: 107px 139px;
+        font-size: 10px;
+        height: 30px;
     }
 
     .img-fluid {
@@ -224,30 +215,40 @@ body {
         height: 20px;
     }
 
+    .display {
+        width: 250px;
+        height: 150px;
+        margin: 0px 5px;
+    }
+
 
     .vs {
-        margin-top: 35%;
-        padding: 0 1rem;
+        margin-top: 10px;
+        font-size: 10px;
     }
 
     .game-area {
-        margin-left: 10px;
-        width: 96%;
+        width: 100%;
     }
 
     .control-panel {
-        margin-top: 9em;
-        margin-right: 3px;
+        margin: 4em 1em 0em;
+    }
+
+    .btn {
+        width: 75px;
+        height: 66px;
     }
 
     .button {
-        width: 95px;
+        width: 89px;
+        height: 76px;
     }
 
 
     .score-area {
         margin-left: 2px;
-        margin-top: 42px;
+        margin-top: 96px;
 
     }
 
