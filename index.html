@@ -17,7 +17,7 @@
 
 
     <!--CSS styel sheet-->
-    <link rel="stylesheet" href="/assests/css/style.css">
+    <link rel="stylesheet" href="./assests/css/style.css">
     <title>RPS</title>
 </head>
 
@@ -25,7 +25,7 @@
     <div class="game-background">
 
         <!--Trigger rules modal-->
-        <button class="style-btn" id="js-btn">Rules <i class="fas fa-space-shuttle"></i></button>
+        <button class="style-btn" id="rules-btn">Rules <i class="fas fa-space-shuttle"></i></button>
         <!--Rules Modal-->
         <div id="rules-modal" class="style-modal">
             <div class="modal-content">
@@ -46,15 +46,19 @@
         <div class="game-area">
 
             <div class="display display-blue" id="user">
-                <span id="user"></span>
+                <img id="player-image" src="/assests/images/rock-control-button.png" class="img-fluid"
+                    alt="Rock Paper Scissors Lizard Spock">
             </div>
-            <div class="vs">
-                <h2>VS</h2>
-            </div>
+            
             <div class="display display-red">
-                <span id="Enemy"></span>
+                <img id="computer-image" src="/assests/images/rock-control-button.png" class="img-fluid"
+                    alt="Rock Paper Scissors Lizard Spock">
             </div>
 
+        </div>
+
+        <div class="vs">
+            <h2>VS</h2>
         </div>
 
 

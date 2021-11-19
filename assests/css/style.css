@@ -11,68 +11,84 @@ body {
     background-repeat: no-repeat;
     font-family: Orbitron;
     text-transform: uppercase;
+    background-image: url(/assests/images/rock-paper-scissors-background-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
 }
 
 /* main background */
 .game-background {
-    background-image: url(/assests/images/rock-paper-scissors-background-image.png);
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    width: 85%;
-    height: 65vh;
-    max-height: 450px;
-    max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15%;
-    padding: 1%;
-    border-radius: 5%;
+    margin: 1% 5% 20% 5%;
+    padding: 5%;
 }
 
 /* game display area */
 .heading {
     text-align: center;
-    word-spacing: 20px;
+    word-spacing: 22px;
+    font-size: 60px;
 }
 
 .game-area {
     display: flex;
-    height: 30%;
-    width: 80%;
+    width: 73%;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+    justify-content: space-between;
+}
+
+.style-btn {
+    font-family: 'Orbitron';
+    text-transform: uppercase;
+    margin: 13px 10px 0px 65px;
+    width: 139px;
+    height: 48px;
+    position: absolute;
+    font-size: 22px;
+}
+
+.style-modal {
+    display: none;
 }
 
 .display {
-    border: 10px groove rgb(19, 78, 139);
+    border: 15px groove rgb(255, 255, 255);
     border-radius: 10%;
-    height: 140px;
-    width: 200px;
+    height: 430px;
+    width: 420px;
+    box-shadow: 20px 20px 20px 0px rgb(0, 0, 0);
+}
+
+.img-fluid {
+    margin-left: 1.5rem;
 }
 
 .vs {
-    margin-top: 12%;
-    padding: 0 3rem;
+    margin: -70px 47%;
+    font-size: 50px;
+
 }
 
 /* control panel area */
 .control-panel {
     text-align: center;
-    padding: auto;
-    margin-right: 70px;
-    margin-top: 3em;
+    margin: 9em 10em 0em 10em;
 }
 
 .btn {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
 }
 
 .button {
     border-radius: 50%;
-    height: 100px;
-    width: 110px;
+    height: 150px;
+    width: 150px;
     background-color: rgb(14, 65, 103);
 
 
@@ -80,7 +96,7 @@ body {
 
 .button-red {
     background-color: rgb(14, 65, 103);
-    box-shadow: 7px 3px 7px 0px rgb(239, 84, 128, 0.29);
+    box-shadow: 20px 20px 20px 0px rgb(0, 0, 0);
 }
 
 .button-red:active,
@@ -90,7 +106,7 @@ body {
 
 .button-yellow {
     background-color: rgb(14, 65, 103);
-    box-shadow: 7px 3px 7px 0px rgba(218, 192, 79, 0.29);
+    box-shadow: 20px 20px 20px 0px rgb(0, 0, 0);
 }
 
 .button-yellow:active,
@@ -100,7 +116,7 @@ body {
 
 .button-blue {
     background-color: rgb(14, 65, 103);
-    box-shadow: 7px 3px 7px 0px rgb(114, 217, 224, 0.29);
+    box-shadow: 20px 20px 20px 0px rgb(0, 0, 0);
 }
 
 .button-blue:active,
@@ -112,18 +128,67 @@ body {
 .score-area {
     display: flex;
     justify-content: space-around;
-    margin-top: -69px;
+    margin-top: 30px;
     text-align: center;
     margin-left: -86px;
-    font-size: 19px;
+    font-size: 50px;
+    margin-bottom: 20%;
 }
 
 /* --------- Media queries */
 
 @media screen and (max-width:768px) {
-    body {
-        margin: 0 -50px;
+    .style-btn {
+        width: 83px;
+        height: 42px;
+        font-size: 15px;
+        margin-top: 77px;
+        margin-left: 10px;
     }
+
+    .heading {
+        word-spacing: 3px;
+        padding-top: 77px;
+        margin-left: 25px;
+        font-size: 34px;
+    }
+
+    .game-area {
+        margin-top: 77px;
+        width: 100%;
+    }
+
+    .display {
+        width: 266px;
+        height: 284px;
+    }
+
+    .vs {
+        margin: -62px 44%;
+        font-size: 33px;
+    }
+
+    .control-panel {
+        margin: 13em 10em 0em;
+    }
+
+    .button {
+        height: 120px;
+        width: 120px;
+    }
+
+    .btn{
+        width: 100px;
+        height: 100px;
+    }
+
+    .score-area {
+        justify-content: space-evenly;
+        font-size: 29px;
+        margin-top: 54px;
+        margin-left: 7px;
+    }
+
 }
 
 
@@ -145,26 +210,42 @@ body {
         margin-top: -62px;
     }
 
+    .style-btn {
+        font-family: 'Orbitron';
+        margin: -27px -182px;
+        width: 60px;
+        position: absolute;
+    }
+
+    .img-fluid {
+        margin-top: 1em;
+        margin-left: 0.5rem;
+        width: 20px;
+        height: 20px;
+    }
+
+
     .vs {
         margin-top: 35%;
         padding: 0 1rem;
     }
 
-    .game-area{
-        margin-left:10px;
+    .game-area {
+        margin-left: 10px;
         width: 96%;
     }
 
-    .control-panel{
-        margin-top:9em;
+    .control-panel {
+        margin-top: 9em;
         margin-right: 3px;
     }
 
-    .button{
+    .button {
         width: 95px;
     }
 
-    .score-area{
+
+    .score-area {
         margin-left: 2px;
         margin-top: 42px;
 
