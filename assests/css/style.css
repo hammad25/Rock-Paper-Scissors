@@ -43,7 +43,7 @@ body {
 .style-btn {
     font-family: 'Orbitron';
     text-transform: uppercase;
-    margin: 13px 10px 0px 30px;
+    margin: 13px 10px 0px 2%;
     width: 139px;
     height: 48px;
     position: absolute;
@@ -73,7 +73,10 @@ body {
 .vs {
     margin: -70px 45%;
     font-size: 45px;
+}
 
+.result{
+    font-size: 27px;
 }
 
 /* control panel area */
@@ -139,6 +142,9 @@ body {
 
 /* --------- Media queries */
 @media screen and (max-width:1024px) {
+    .style-btn{
+        margin:7px 10px 0px -34px;
+    }
     .vs {
         margin: 47px 45%;
     }

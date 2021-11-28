@@ -1,4 +1,5 @@
 // variables
+let rulesBtn= document.getElementById('rules-btn');
 const buttons = document.getElementsByTagName("button");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
@@ -17,7 +18,6 @@ for (let button of buttons) {
 /**
  * Main game function. It reads the data-type of the selected button
  * and generates and random choice from the array
- * @param {*} playerChoices 
  */
 function playGame(playerChoice){
     playerImage.src = `assests/images/player-${choices[playerChoice]}.png`;
@@ -36,18 +36,38 @@ function playGame(playerChoice){
 function checkWinner(playerChoice, computerChoice) {
     /* if player choices rock*/
     if (playerChoice === "rock" && computerChoice === "rock"){
-        document.get
+        document.getElementById('battle-result').innerHTML="Draw!";
     }
-
+    else if (playerChoice === "rock" && computerChoice === "paper"){
+        document.getElementById('battle-result').innerHTML="Battle Lost!";
+    }
+    else if( playerChoice === "rock" && computerChoice === "scissors"){
+        document.getElementById('battle-result').innerHTML="Battle Won!";
+    }
+    else if(playerChoice === "paper" && computerChoice === "rock"){
+        document.getElementById('battle-result').innerHTML="Battle Won!";
+    }
+    else if( playerChoice === "paper" && computerChoice === "paper"){
+        document.getElementById('battle-result').innerHTML="Draw!";
+    }
+    else if (playerChoice === "paper" && computerChoice === "scissors"){
+        document.getElementById('battle-result').innerHTML="Battle Lost!";
+    }
+    else if (playerChoice === "scissors" && computerChoice === "rock"){
+        document.getElementById('battle-result').innerHTML="Battle Lost!";
+    }
+    else if (playerChoice === "scissors" && computerChoice === "paper"){
+        document.getElementById('battle-result').innerHTML="Battle Won!";
+    }
+    else if (playerChoice === "scissors" && computerChoice === "scissors"){
+        document.getElementById('battle-result').innerHTML="Draw!";
+    }
 }
 
 function compareAnswer() {
 
 }
 
-function resultAnswer() {
-
-}
 
 function incrementScore() {
 
