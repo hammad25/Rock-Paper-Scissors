@@ -1,5 +1,6 @@
 //Variables
 let buttons = document.getElementsByTagName("buttons");
+let weapons=["rock","paper","scissors"]
 
 /**
  * Funtion to open and close the rules button
@@ -41,3 +42,35 @@ for (button of buttons) {
   });
 }
 
+/**
+ * This is for the main game functionality, takes the data-type value parameter of the selected user button 
+ * and generates a random computer response from the weapons array
+ */
+function playGame(playerChoice){
+  playerChoice.src=
+
+}
+
+function checkWinner(){
+
+}
+
+function addPlayerScore(){
+
+}
+
+function addEnemyScore(){
+
+}
+
+function trackRound(){
+
+}
+
+function timer(){
+
+}
+
+function resetFunction (){
+
+}
