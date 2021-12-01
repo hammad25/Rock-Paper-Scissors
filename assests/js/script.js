@@ -1,6 +1,8 @@
 //Variables
 let buttons = document.getElementsByTagName("buttons");
 let weapons=["rock","paper","scissors"]
+let playerImage=document.getElementById("player-image");
+let enemyImage=document.getElementById("enemy-image");
 
 /**
  * Funtion to open and close the rules button
@@ -37,8 +39,8 @@ window.onclick = function (event) {
  */
 for (button of buttons) {
   button.addEventListener('click', function () {
-    let playerChoice = this.Attribute('data-type');
-    playGame(playerChoice);
+    let playerWeapon = this.Attribute('data-type');
+    playGame(playerWeapon);
   });
 }
 
@@ -46,8 +48,15 @@ for (button of buttons) {
  * This is for the main game functionality, takes the data-type value parameter of the selected user button 
  * and generates a random computer response from the weapons array
  */
-function playGame(playerChoice){
-  playerChoice.src=
+function playGame(playerWeapon){
+  playerImage.src=`assets/images/${weapons[playerWeapon]}-control-button.png`;
+  let enemyWeapon= Math.floor(Math.random() * 3);
+  enemyImage.src=`assets/images/${weapons[enemyWeapon]}-control-button.png`;
+
+  let result= checkWinner(weapons[playerWeapon], weapons[enemyWeapon]);
+
+  checkWinner(result);
+  trackRound();
 
 }
 
