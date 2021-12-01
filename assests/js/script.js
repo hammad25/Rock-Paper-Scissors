@@ -1,7 +1,8 @@
 //Variables
 let buttons = document.getElementsByTagName("button");
-let weapons=["rock","paper","scissors"]
+let weapons=["rock","paper","scissor"]
 let playerImage = document.getElementById("player-image");
+console.log(playerImage);
 let enemyImage = document.getElementById("enemy-image");
 
 /**
@@ -37,9 +38,11 @@ window.onclick = function (event) {
 /**
  * Add event listener to the user control button
  */
-for (button of buttons) {
+for (let button of buttons) {
   button.addEventListener('click', function () {
-    let playerWeapon = this.Attribute('data-type');
+    let playerWeapon = this.getAttribute('data-type');
+    console.log(playerWeapon)
+    console.log('click')
     playGame(playerWeapon);
   });
 }
@@ -49,14 +52,12 @@ for (button of buttons) {
  * and generates a random computer response from the weapons array
  */
 function playGame(playerWeapon){
-  playerImage.src=`/assets/images/${playerWeapon}-control-button.png`;
-  let enemyWeapon= Math.floor(Math.random() * weapons.length);
-  enemyImage.src=`/assets/images/${enemyWeapon}-control-button.png`;
+  playerImage.src=`assests/images/${playerWeapon}-control-button.png`;
+  let enemyWeapon= weapons[Math.floor(Math.random() * weapons.length)];
+  console.log(enemyWeapon);
+  enemyImage.src=`/assests/images/${enemyWeapon}-control-button.png`;
 
-  let result= checkWinner(playerWeapon, enemyWeapon);
-
-  checkWinner(result);
-  trackRound();
+  checkWinner(playerWeapon, enemyWeapon);
 
 }
 
@@ -65,47 +66,44 @@ function playGame(playerWeapon){
  */
  function checkWinner(playerWeapon, enemyWeapon) {
   /* If player chooses rock */
-  if (playerWeapon === "rock" && enemyWeapon === "rock") {
+  if (playerWeapon === enemyWeapon) {
     document.getElementById("battle-result").innerHTML = "Draw!";
   }
   else if (playerWeapon === "rock" && enemyWeapon === "paper") {
     document.getElementById("battle-result").innerHTML = "You Lose! Paper Covers Rock";
     addEnemyScore();
   }
-  else if (playerWeapon === "rock" && enemyWeapon === "scissors") {
-    document.getElementById("battle-result").innerHTML = "You Win! Rock Crushes Scissors";
+  else if (playerWeapon === "rock" && enemyWeapon === "scissor") {
+    document.getElementById("battle-result").innerHTML = "You Win! Rock Crushes Scissor";
     addPlayerScore();
   }
   
   /* If chooses paper */
-  else if (playerWeapon === "paper" && enemyWeapon === "paper") {
-    document.getElementById("battle-result").innerHTML = "Draw!";
-  }
   else if (playerWeapon === "paper" && enemyWeapon === "rock") {
     document.getElementById("battle-result").innerHTML = "You Win! Paper Covers Rock";
     addPlayerScore();
   }
-  else if (playerWeapon === "paper" && enemyWeapon === "scissors") {
-    document.getElementById("battle-result").innerHTML = "You Lose! Scissors Cuts Paper";
+  else if (playerWeapon === "paper" && enemyWeapon === "scissor") {
+    document.getElementById("battle-result").innerHTML = "You Lose! Scissor Cuts Paper";
     addEnemyScore();
   }
 
   /* If player chooses scissors */
-  else if (playerWeapon === "scissors" && enemyWeapon === "scissors") {
-    document.getElementById("battle-result").innerHTML = "Draw!";
-  }
-  else if (playerWeapon === "scissors" && enemyWeapon === "rock") {
-    document.getElementById("battle-result").innerHTML = "You Lose! Rock Crushes Scissors";
+
+  else if (playerWeapon === "scissor" && enemyWeapon === "rock") {
+    document.getElementById("battle-result").innerHTML = "You Lose! Rock Crushes Scissor";
     addEnemyScore();
   }
-  else if (playerWeapon === "scissors" && enemyWeapon === "paper") {
-    document.getElementById("battle-result").innerHTML = "You Win! Scissors Cuts Paper";
+  else if (playerWeapon === "scissor" && enemyWeapon === "paper") {
+    document.getElementById("battle-result").innerHTML = "You Win! Scissor Cuts Paper";
     addPlayerScore();
   }
 
 }
 
 function addPlayerScore(){
+  
+  
 
 }
 
