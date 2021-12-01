@@ -1,3 +1,6 @@
+//Variables
+let buttons = document.getElementsByTagName("buttons");
+
 /**
  * Funtion to open and close the rules button
  */
@@ -10,34 +13,31 @@ btn.addEventListener('click', modalPopup);
 
 // When the user clicks the button, open the modal 
 function modalPopup() {
-    modal.style.display = "block";
+  modal.style.display = "block";
 }
 
 // Get the <span> element that closes the modal and close it 
 let span = document.getElementsByClassName("close")[0];
 span.addEventListener('click', closeModal);
-function closeModal(){
-    modal.style.display="none";
+
+function closeModal() {
+  modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
 
 /**
- * Add event listener to the player control buttons
+ * Add event listener to the user control button
  */
-let buttons=document.getElementsByTagName('button');
-for (let button of buttons){
-    buttons.addEventListener('click', function(){
-        let playerChoice= this.getAttribute ("data-type");
-        playGame(playerChoice);
-    });
+for (button of buttons) {
+  button.addEventListener('click', function () {
+    let playerChoice = this.Attribute('data-type');
+    playGame(playerChoice);
+  });
 }
-
-
-
 
