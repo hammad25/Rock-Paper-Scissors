@@ -89,17 +89,29 @@
             <div class="user-score">
                 <p class="score">WINS <span class="result-score"  id="user-score">0</span></p>
             </div>
-            <div class="space"></div>
+            <div id="final-round" style="display: none;" >
+                <p class="score">Final Round</p>
+            </div>
             <div class="enemy-score">
                 <p class="score">WINS <span class="result-score"  id="enemy-score">0</span></p>
             </div>
         </div>
 
         <div class="winning-modal"  id="winner-modal">
+            <span class="close">&times;</span>
             <div> <img src="./assests/images/space-commander.png"></div>
             <div>
                 <h2>Well done solider</h2>
                 <p>get ready for the final battle</p>
+                <p>You'll have 3 seconds to fire your weapon</p>
+            </div>
+        </div>
+
+        <div class="losing-modal"  id="lose-modal">
+            <span class="close">&times;</span>
+            <div> <img src=""></div>
+            <div>
+                <h2>You Lost</h2>
             </div>
         </div>
 

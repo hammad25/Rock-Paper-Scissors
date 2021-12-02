@@ -54,10 +54,11 @@ function playGame(playerWeapon) {
   playerImage.src = `assests/images/${playerWeapon}-control-button.png`;
   let enemyWeapon = weapons[Math.floor(Math.random() * weapons.length)];
   console.log(enemyWeapon);
+
   enemyImage.src = `/assests/images/${enemyWeapon}-control-button.png`;
 
   checkWinner(playerWeapon, enemyWeapon);
-
+  trackRound();
 }
 
 /**
@@ -108,26 +109,66 @@ function trackRound() {
   let playerWinningScore = document.getElementById("user-score").textContent;
   let enemyWinningScore = document.getElementById("enemy-score").textContent;
   let winnerModal = document.getElementById("winner-modal");
+  let loseModal = document.getElementById("lose-modal");
+  console.log('test')
 
-  if (playerWinningScore === 3) {
+  console.log('winning: ', playerWinningScore)
+  console.log('enemy', enemyWinningScore)
+  if (playerWinningScore == 3) {
+    //detect if final round text showing 
+    // if yes - show final round modal
+    //other show normal winning modal
     winningModal();
+    console.log(winnerModal)
 
-    // function winningModal(){
-    // winnerModal.style.display = "block";
+  } else if (enemyWinningScore == 3) {
+    losingModal();
+    console.log(losingModal);
+  }
 
-  } else if (enemyWinningScore === 3) {
+  function winningModal() {
+    winnerModal.style.display = "block";
+  }
 
+  function losingModal() {
+    loseModal.style.display = "block"
+    resetFunction();
+  }
 
+  window.onclick = function (event) {
+    if (event.target == winnerModal) {
+      winnerModal.style.display = "none";
+      resetFunction()
+      finalRound()
 
+    }
+    else if (event.target == loseModal){
+      loseModal.style.display = "none";
+      resetFunction()
+    }
   }
 
 
+
+  
 }
 
 function timer() {
 
+
+}
+
+function finalRound(){
+  let finalRoundText = document.getElementById("final-round");
+  finalRoundText.style.display = "";
+
+  var root = document.documentElement;
+  root.className += ' final-round';
+  console.log(finalRoundText)
 }
 
 function resetFunction() {
+  document.getElementById("user-score").textContent = 0;
+  document.getElementById("enemy-score").textContent = 0;
 
 }
