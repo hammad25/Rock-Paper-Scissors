@@ -1,6 +1,6 @@
 //Variables
 let buttons = document.getElementsByTagName("button");
-let weapons=["rock","paper","scissor"]
+let weapons = ["rock", "paper", "scissor"]
 let playerImage = document.getElementById("player-image");
 console.log(playerImage);
 let enemyImage = document.getElementById("enemy-image");
@@ -42,7 +42,6 @@ for (let button of buttons) {
   button.addEventListener('click', function () {
     let playerWeapon = this.getAttribute('data-type');
     console.log(playerWeapon)
-    console.log('click')
     playGame(playerWeapon);
   });
 }
@@ -51,11 +50,11 @@ for (let button of buttons) {
  * This is for the main game functionality, takes the data-type value parameter of the selected user button 
  * and generates a random computer response from the weapons array
  */
-function playGame(playerWeapon){
-  playerImage.src=`assests/images/${playerWeapon}-control-button.png`;
-  let enemyWeapon= weapons[Math.floor(Math.random() * weapons.length)];
+function playGame(playerWeapon) {
+  playerImage.src = `assests/images/${playerWeapon}-control-button.png`;
+  let enemyWeapon = weapons[Math.floor(Math.random() * weapons.length)];
   console.log(enemyWeapon);
-  enemyImage.src=`/assests/images/${enemyWeapon}-control-button.png`;
+  enemyImage.src = `/assests/images/${enemyWeapon}-control-button.png`;
 
   checkWinner(playerWeapon, enemyWeapon);
 
@@ -64,64 +63,71 @@ function playGame(playerWeapon){
 /**
  * Compares playerWeapon and enemyWeapon data strings to check winner of game
  */
- function checkWinner(playerWeapon, enemyWeapon) {
+function checkWinner(playerWeapon, enemyWeapon) {
   /* If player chooses rock */
   if (playerWeapon === enemyWeapon) {
     document.getElementById("battle-result").innerHTML = "Draw!";
-  }
-  else if (playerWeapon === "rock" && enemyWeapon === "paper") {
+  } else if (playerWeapon === "rock" && enemyWeapon === "paper") {
     document.getElementById("battle-result").innerHTML = "You Lose! Paper Covers Rock";
     addEnemyScore();
-  }
-  else if (playerWeapon === "rock" && enemyWeapon === "scissor") {
+  } else if (playerWeapon === "rock" && enemyWeapon === "scissor") {
     document.getElementById("battle-result").innerHTML = "You Win! Rock Crushes Scissor";
     addPlayerScore();
   }
-  
+
   /* If chooses paper */
   else if (playerWeapon === "paper" && enemyWeapon === "rock") {
     document.getElementById("battle-result").innerHTML = "You Win! Paper Covers Rock";
     addPlayerScore();
-  }
-  else if (playerWeapon === "paper" && enemyWeapon === "scissor") {
+  } else if (playerWeapon === "paper" && enemyWeapon === "scissor") {
     document.getElementById("battle-result").innerHTML = "You Lose! Scissor Cuts Paper";
     addEnemyScore();
   }
 
   /* If player chooses scissors */
-
   else if (playerWeapon === "scissor" && enemyWeapon === "rock") {
     document.getElementById("battle-result").innerHTML = "You Lose! Rock Crushes Scissor";
     addEnemyScore();
-  }
-  else if (playerWeapon === "scissor" && enemyWeapon === "paper") {
+  } else if (playerWeapon === "scissor" && enemyWeapon === "paper") {
     document.getElementById("battle-result").innerHTML = "You Win! Scissor Cuts Paper";
     addPlayerScore();
   }
+}
+
+function addPlayerScore() {
+  let playerScore = parseInt(document.getElementById("user-score").textContent);
+  document.getElementById("user-score").textContent = ++playerScore;
+}
+
+function addEnemyScore() {
+  let enemyScore = parseInt(document.getElementById("enemy-score").textContent);
+  document.getElementById("enemy-score").textContent = ++enemyScore;
+}
+
+function trackRound() {
+  let playerWinningScore = document.getElementById("user-score").textContent;
+  let enemyWinningScore = document.getElementById("enemy-score").textContent;
+  let winnerModal = document.getElementById("winner-modal");
+
+  if (playerWinningScore === 3) {
+    winningModal();
+
+    // function winningModal(){
+    // winnerModal.style.display = "block";
+
+  } else if (enemyWinningScore === 3) {
+
+
+
+  }
+
 
 }
 
-function addPlayerScore(){
-  let playerScore= parseInt(document.getElementById("user-score").textContent);
-  document.getElementById("user-score").textContent= ++playerScore; 
-}
-
-
-
-function addEnemyScore(){
-  let enemyScore= parseInt(document.getElementById("enemy-score").textContent);
-  document.getElementById("enemy-score").textContent= ++enemyScore;
+function timer() {
 
 }
 
-function trackRound(){
-
-}
-
-function timer(){
-
-}
-
-function resetFunction (){
+function resetFunction() {
 
 }
