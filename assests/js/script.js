@@ -102,12 +102,15 @@ function playGame(playerWeapon){
 }
 
 function addPlayerScore(){
-  
-  
-
+  let playerScore= parseInt(document.getElementById("user-score").textContent);
+  document.getElementById("user-score").textContent= ++playerScore; 
 }
 
+
+
 function addEnemyScore(){
+  let enemyScore= parseInt(document.getElementById("enemy-score").textContent);
+  document.getElementById("enemy-score").textContent= ++enemyScore;
 
 }
 

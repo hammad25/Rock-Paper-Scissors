@@ -49,7 +49,7 @@ body {
     height: 48px;
     position: absolute;
     font-size: 22px;
-    box-shadow: 10px 10px 20px 0px rgb(69, 146, 18);
+    box-shadow: 10px 10px 20px 0px rgb(0, 0, 0);
     text-shadow: 1px 1px rgb(69, 146, 18);
 }
 
@@ -91,16 +91,18 @@ body {
 }
 
 .vs {
-    margin: -70px 43%;
+    margin: -70px 31%;
     font-size: 45px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.3) ;
-    word-spacing: 5px;
-    letter-spacing: 1px;
+    
 }
 
 .result{
     font-size: 27px;
+    background-color: rgba(0, 0, 0, 0.3) ;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    margin-top: 15px;
 }
 
 /* control panel area */
@@ -160,12 +162,12 @@ body {
     margin-top: 30px;
     text-align: center;
     margin-left: -86px;
-    font-size: 50px;
+    font-size: 4.5rem;
     margin-bottom: 20%;
-    text-shadow: 5px 5px rgb(69, 146, 18);
+    word-spacing: 20px;
+    text-shadow: 5px 5px rgb(0, 0, 0);
 };
 
-}
 
 /* --------- Media queries */
 @media screen and (max-width:1024px) {
