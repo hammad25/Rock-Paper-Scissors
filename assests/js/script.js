@@ -1,21 +1,16 @@
 //Variables
+let modal = document.getElementById("rules-modal");
 let buttons = document.getElementsByTagName("button");
 let weapons = ["rock", "paper", "scissor"]
 let playerImage = document.getElementById("player-image");
-console.log(playerImage);
 let enemyImage = document.getElementById("enemy-image");
 
 /**
  * Funtion to open and close the rules button
  */
-// Get the modal
-let modal = document.getElementById("rules-modal");
-
-// Get the button that opens the modal 
 let btn = document.getElementById("rules-button");
 btn.addEventListener('click', modalPopup);
 
-// When the user clicks the button, open the modal 
 function modalPopup() {
   modal.style.display = "block";
 }
@@ -132,43 +127,40 @@ function trackRound() {
 
   function losingModal() {
     loseModal.style.display = "block"
+    document.getElementById("battle-result").textContent = "";
     resetFunction();
   }
 
+  //click on window to start final battle or reset game if lose the first 3 rounds
   window.onclick = function (event) {
     if (event.target == winnerModal) {
       winnerModal.style.display = "none";
       resetFunction()
       finalRound()
-
-    }
-    else if (event.target == loseModal){
+    } else if (event.target == loseModal) {
       loseModal.style.display = "none";
       resetFunction()
     }
   }
+}
 
-
-
-  
+//reset the scores back to zero
+function resetFunction() {
+  document.getElementById("user-score").textContent = 0;
+  document.getElementById("enemy-score").textContent = 0;
 }
 
 function timer() {
 
-
 }
 
-function finalRound(){
+//
+function finalRound() {
+  document.getElementById("battle-result").textContent = "";
   let finalRoundText = document.getElementById("final-round");
-  finalRoundText.style.display = "";
+  finalRoundText.style.display = "block";
 
   var root = document.documentElement;
-  root.className += ' final-round';
+  root.className += 'final-round';
   console.log(finalRoundText)
-}
-
-function resetFunction() {
-  document.getElementById("user-score").textContent = 0;
-  document.getElementById("enemy-score").textContent = 0;
-
 }
