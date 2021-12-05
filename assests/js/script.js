@@ -27,7 +27,8 @@ function closeModal() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target == modal ) {
+
     modal.style.display = "none";
   }
 }
@@ -108,18 +109,30 @@ function trackRound() {
   let enemyWinningScore = document.getElementById("enemy-score").textContent;
   let winnerModal = document.getElementById("winner-modal");
   let loseModal = document.getElementById("lose-modal");
+  let gameWonModal = document.getElementById("gamewon-modal");
+  let gameLostModal = document.getElementById("gamelost-modal");
   console.log('test')
-
   console.log('winning: ', playerWinningScore)
   console.log('enemy', enemyWinningScore)
-  if (playerWinningScore === "3" || (isFinalRound === true && playerWinningScore === '1') ) {
-    winningModal();
-    console.log(winnerModal)
 
-  } else if (enemyWinningScore === "3" || (isFinalRound === true && enemyWinningScore === '1') ) {
+
+  if (playerWinningScore === "3" ) {
+    winningModal();
+    console.log(winningModal)
+  } else if (enemyWinningScore === "3" ) {
     losingModal();
     console.log(losingModal);
   }
+
+  if (isFinalRound === true && playerWinningScore === '1'){
+    gameWon();
+    console.log(gameWon);
+
+  } else if (isFinalRound === true && enemyWinningScore === '1'){
+    gameLost();
+    console.log(gameLost);
+  }
+
 
   //click on window to start final battle or reset game 
   window.onclick = function (event) {
@@ -127,22 +140,40 @@ function trackRound() {
       winnerModal.style.display = "none";
       let gameFinalRound = isFinalRound
       resetFunction()
+      finalRound()
 
       console.log(gameFinalRound);
-      if ( gameFinalRound === false ){
-        finalRound()
-      }
-      else {
-        location.reload();
-      }
+      // if ( gameFinalRound === false ){
+      //   finalRound()
+      // }
+      // else{
+      //   location.reload();
+      // }
     } else if (event.target == loseModal) {
       loseModal.style.display = "none";
-      if (isFinalRound === true ) {
-        location.reload();
-      }
+
+      // if (isFinalRound === true ) {
+      //   location.reload();
+      // }
       resetFunction()
     }
+
+    if (event.target == gameWonModal){
+      if (isFinalRound === true){
+        location.reload();
+      }
+
+    }else if (event.target == gameLostModal){
+      if (isFinalRound === true){
+        location.reload();
+
+      }
+    }
+
+
   }
+  
+
 }
 
 function winningModal() {
@@ -157,8 +188,23 @@ function losingModal() {
   resetFunction();
 }
 
+function gameWon() {
+  let gameWonModal = document.getElementById("gamewon-modal");
+  gameWonModal.style.display = "block";
+}
 
-//reset the scores back to zero
+function gameLost(){
+  let gameLostModal = document.getElementById("gamelost-modal");
+  gameLostModal.style.display = "block";
+}
+
+
+
+
+
+/**
+ * reset game scores after 1st battle 
+ */
 function resetFunction() {
   document.getElementById("user-score").textContent = 0;
   document.getElementById("enemy-score").textContent = 0;
