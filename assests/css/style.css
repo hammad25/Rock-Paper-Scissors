@@ -11,32 +11,46 @@
     border: 10;
     width: 100%;
     height: 100%;
-    -moz-box-shadow:inset 0 0 40px #FF0000;
-    -webkit-box-shadow:inset 0 0 40px #FF0000;
-    box-shadow:inset 0 0 40px #FF0000;
+    -moz-box-shadow: inset 0 0 40px #FF0000;
+    -webkit-box-shadow: inset 0 0 40px #FF0000;
+    box-shadow: inset 0 0 40px #FF0000;
 
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-	transform: scale(10);
-	animation: pulse 1s infinite;
+    transform: scale(10);
+    animation: pulse 1s infinite;
 }
 
 @keyframes pulse {
-	0% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
-	}
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+    }
 
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
-	}
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+    }
 
-	100% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
-	}
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
 }
-    
+
+.marb{
+    margin-bottom: 30px; 
+}
+
+.close {
+    font-size: 40px;
+    cursor: pointer; 
+    box-shadow: 10px 10px 20px 0px rgb(69, 146, 18);
+    border-radius: 50%;
+    width: 50px;
+    background-color: black;
+
+}
+
 
 body {
     background-color: black;
@@ -89,36 +103,38 @@ body {
 
 .style-modal {
     display: none;
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 70px; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 70px;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.8); 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modals{
-     display: none;  
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 70px; 
+
+
+.modals {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 70px;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.9); 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
     text-align: center;
     line-height: 2em;
     font-size: 1.5em;
 }
 
-.modal-content{
+.modal-content {
     text-align: center;
     font-size: 1.5em;
 }
@@ -143,12 +159,12 @@ body {
     margin: -70px 31%;
     font-size: 45px;
     text-align: center;
-    
+
 }
 
-.result{
+.result {
     font-size: 27px;
-    background-color: rgba(0, 0, 0, 0.3) ;
+    background-color: rgba(0, 0, 0, 0.3);
     word-spacing: 5px;
     letter-spacing: 1px;
     margin-top: 15px;
@@ -215,13 +231,16 @@ body {
     margin-bottom: 20%;
     word-spacing: 20px;
     text-shadow: 5px 5px rgb(0, 0, 0);
-};
+}
+
+;
 
 /* --------- Media queries */
 @media screen and (max-width:1024px) {
-    .style-btn{
-        margin:7px 10px 0px -34px;
+    .style-btn {
+        margin: 7px 10px 0px -34px;
     }
+
     .vs {
         margin: 47px 45%;
     }
@@ -300,7 +319,7 @@ body {
 
 @media screen and (max-width:375px) {
 
-    .game-background{
+    .game-background {
         width: 100%;
     }
 

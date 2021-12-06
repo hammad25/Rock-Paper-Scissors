@@ -4,6 +4,10 @@ let buttons = document.getElementsByTagName("button");
 let weapons = ["rock", "paper", "scissor"]
 let playerImage = document.getElementById("player-image");
 let enemyImage = document.getElementById("enemy-image");
+let winnerModal = document.getElementById("winner-modal");
+let loseModal = document.getElementById("lose-modal");
+let gameWonModal = document.getElementById("gamewon-modal");
+let gameLostModal = document.getElementById("gamelost-modal");
 let finalRoundSelection = false;
 let isFinalRound = false;
 
@@ -27,8 +31,7 @@ function closeModal() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal ) {
-
+  if (event.target == modal) {
     modal.style.display = "none";
   }
 }
@@ -107,36 +110,45 @@ function addEnemyScore() {
 function trackRound() {
   let playerWinningScore = document.getElementById("user-score").textContent;
   let enemyWinningScore = document.getElementById("enemy-score").textContent;
-  let winnerModal = document.getElementById("winner-modal");
-  let loseModal = document.getElementById("lose-modal");
-  let gameWonModal = document.getElementById("gamewon-modal");
-  let gameLostModal = document.getElementById("gamelost-modal");
+
   console.log('test')
   console.log('winning: ', playerWinningScore)
   console.log('enemy', enemyWinningScore)
 
 
-  if (playerWinningScore === "3" ) {
+  if (playerWinningScore === "3") {
     winningModal();
     console.log(winningModal)
-  } else if (enemyWinningScore === "3" ) {
+  } else if (enemyWinningScore === "3") {
     losingModal();
     console.log(losingModal);
   }
 
-  if (isFinalRound === true && playerWinningScore === '1'){
+  if (isFinalRound === true && playerWinningScore === '1') {
     gameWon();
     console.log(gameWon);
 
-  } else if (isFinalRound === true && enemyWinningScore === '1'){
+  } else if (isFinalRound === true && enemyWinningScore === '1') {
     gameLost();
     console.log(gameLost);
   }
 
+  
+
+  // let span = document.getElementsByClassName("close")[2];
+  // span.addEventListener('click', closeLose);
+
+  // function closeLose() {
+  //   loseModal.style.display = "none";
+  //   resetFunction();
+  // }
+
+
+
 
   //click on window to start final battle or reset game 
   window.onclick = function (event) {
-    if (event.target == winnerModal ) {
+    if (event.target == winnerModal) {
       winnerModal.style.display = "none";
       let gameFinalRound = isFinalRound
       resetFunction()
@@ -158,13 +170,13 @@ function trackRound() {
       resetFunction()
     }
 
-    if (event.target == gameWonModal){
-      if (isFinalRound === true){
+    if (event.target == gameWonModal) {
+      if (isFinalRound === true) {
         location.reload();
       }
 
-    }else if (event.target == gameLostModal){
-      if (isFinalRound === true){
+    } else if (event.target == gameLostModal) {
+      if (isFinalRound === true) {
         location.reload();
 
       }
@@ -172,7 +184,7 @@ function trackRound() {
 
 
   }
-  
+
 
 }
 
@@ -193,7 +205,7 @@ function gameWon() {
   gameWonModal.style.display = "block";
 }
 
-function gameLost(){
+function gameLost() {
   let gameLostModal = document.getElementById("gamelost-modal");
   gameLostModal.style.display = "block";
 }
@@ -232,6 +244,6 @@ function finalRound() {
 function checkFinalRound() {
   if (finalRoundSelection === false) {
     addEnemyScore();
-    losingModal();
-  } 
+    gameLost();
+  }
 }
