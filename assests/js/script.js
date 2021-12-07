@@ -21,19 +21,12 @@ function modalPopup() {
   modal.style.display = "block";
 }
 
-// Get the <span> element that closes the modal and close it 
+// Get the <span> element that closes the modal  
 let span = document.getElementsByClassName("close")[0];
 span.addEventListener('click', closeModal);
 
 function closeModal() {
   modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
 }
 
 /**
@@ -42,7 +35,6 @@ window.onclick = function (event) {
 for (let button of buttons) {
   button.addEventListener('click', function () {
     let playerWeapon = this.getAttribute('data-type');
-    console.log(playerWeapon)
     finalRoundSelection = true;
     playGame(playerWeapon);
   });
@@ -55,7 +47,6 @@ for (let button of buttons) {
 function playGame(playerWeapon) {
   playerImage.src = `assests/images/${playerWeapon}-control-button.png`;
   let enemyWeapon = weapons[Math.floor(Math.random() * weapons.length)];
-  console.log(enemyWeapon);
 
   enemyImage.src = `/assests/images/${enemyWeapon}-control-button.png`;
 
@@ -97,54 +88,41 @@ function checkWinner(playerWeapon, enemyWeapon) {
   }
 }
 
+/**
+ * Add player score each round
+ */
 function addPlayerScore() {
   let playerScore = parseInt(document.getElementById("user-score").textContent);
   document.getElementById("user-score").textContent = ++playerScore;
 }
 
+/**
+ * Add computer score each round
+ */
 function addEnemyScore() {
   let enemyScore = parseInt(document.getElementById("enemy-score").textContent);
   document.getElementById("enemy-score").textContent = ++enemyScore;
 }
 
+/**
+ * Keep track of scores for the first battle and the final battle
+ */
 function trackRound() {
   let playerWinningScore = document.getElementById("user-score").textContent;
   let enemyWinningScore = document.getElementById("enemy-score").textContent;
 
-  console.log('test')
-  console.log('winning: ', playerWinningScore)
-  console.log('enemy', enemyWinningScore)
-
-
   if (playerWinningScore === "3") {
     winningModal();
-    console.log(winningModal)
   } else if (enemyWinningScore === "3") {
     losingModal();
-    console.log(losingModal);
   }
 
   if (isFinalRound === true && playerWinningScore === '1') {
     gameWon();
-    console.log(gameWon);
 
   } else if (isFinalRound === true && enemyWinningScore === '1') {
     gameLost();
-    console.log(gameLost);
   }
-
-  
-
-  // let span = document.getElementsByClassName("close")[2];
-  // span.addEventListener('click', closeLose);
-
-  // function closeLose() {
-  //   loseModal.style.display = "none";
-  //   resetFunction();
-  // }
-
-
-
 
   //click on window to start final battle or reset game 
   window.onclick = function (event) {
@@ -154,19 +132,8 @@ function trackRound() {
       resetFunction()
       finalRound()
 
-      console.log(gameFinalRound);
-      // if ( gameFinalRound === false ){
-      //   finalRound()
-      // }
-      // else{
-      //   location.reload();
-      // }
     } else if (event.target == loseModal) {
       loseModal.style.display = "none";
-
-      // if (isFinalRound === true ) {
-      //   location.reload();
-      // }
       resetFunction()
     }
 
@@ -185,6 +152,7 @@ function trackRound() {
 
 }
 
+//winning and losing modals
 function winningModal() {
   let winnerModal = document.getElementById("winner-modal");
   winnerModal.style.display = "block";
@@ -207,18 +175,12 @@ function gameLost() {
   gameLostModal.style.display = "block";
 }
 
-
-
-
-
 /**
  * reset game scores after 1st battle 
  */
 function resetFunction() {
   document.getElementById("user-score").textContent = 0;
   document.getElementById("enemy-score").textContent = 0;
-
-  // isFinalRound = false
   finalRoundSelection = false
 }
 
@@ -232,7 +194,6 @@ function finalRound() {
 
   var root = document.documentElement;
   root.className += 'final-round';
-  console.log(finalRoundText)
 
   setTimeout(checkFinalRound, 5000);
 
