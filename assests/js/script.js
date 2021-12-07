@@ -181,10 +181,7 @@ function trackRound() {
 
       }
     }
-
-
   }
-
 
 }
 

@@ -238,7 +238,9 @@ body {
 /* --------- Media queries */
 @media screen and (max-width:1024px) {
     .style-btn {
-        margin: 7px 10px 0px -34px;
+        margin: 7px 10px 0px -4px;
+        width: 121px;
+        height: 55px;
     }
 
     .vs {
@@ -287,12 +289,12 @@ body {
     }
 
     .vs {
-        margin: -62px 44%;
+        margin: -62px 12%;
         font-size: 33px;
     }
 
     .control-panel {
-        margin: 13em 10em 0em;
+        margin: 7em 10em 0em;
     }
 
     .button {
@@ -327,13 +329,14 @@ body {
         margin-top: -62px;
         font-size: 32px;
         width: 125%;
+        margin-left: 51px;
     }
 
     .style-btn {
         font-family: 'Orbitron';
         width: 50px;
         position: absolute;
-        margin: 113px 231px;
+        margin: 150px 211px;
         font-size: 10px;
         height: 30px;
     }
@@ -346,9 +349,9 @@ body {
     }
 
     .display {
-        width: 214px;
+        width: 186px;
         height: 150px;
-        margin: 0px 5px;
+        margin: 0px 10px;
     }
 
     .display-img {
@@ -357,7 +360,8 @@ body {
 
 
     .vs {
-        margin: 34px 209px;
+        margin-top: 10px;
+        margin-left:127px ;
         font-size: 22px;
     }
 
@@ -384,6 +388,14 @@ body {
         margin-left: 7px;
         margin-top: 162px;
         width: 126%;
+    }
+
+    .modals{
+        width: 140%;
+    }
+
+    .final-round{
+        width: 140%;
     }
 
 
