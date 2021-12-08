@@ -10,6 +10,7 @@ let gameWonModal = document.getElementById("gamewon-modal");
 let gameLostModal = document.getElementById("gamelost-modal");
 let finalRoundSelection = false;
 let isFinalRound = false;
+let soundOn = false;
 
 /**
  * Funtion to open and close the rules button
@@ -203,5 +204,31 @@ function checkFinalRound() {
   if (finalRoundSelection === false) {
     addEnemyScore();
     gameLost();
+  }
+}
+
+
+let soundButton = document.getElementById("sound-btn");
+soundButton.addEventListener('click', addSound);
+
+function addSound() {
+
+  if (soundOn === false) {
+    soundButton.innerHTML = `<i class="fas fa-volume-up"></i>`;
+  } else {
+    soundButton.innerHTML = `<i class="fas fa-volume-mute"></i>`;
+  }
+
+  soundOn = !soundOn;
+}
+
+let gameSound = document.getElementById("game-sound");
+gameSound.addEventListener(click, playAudio);
+
+function playAudio(){
+  if (soundOn === false) {
+    gameSound.play();
+  } else {
+    gameSound.onpause();
   }
 }
