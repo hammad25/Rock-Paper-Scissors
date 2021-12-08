@@ -208,11 +208,12 @@ function checkFinalRound() {
 }
 
 
+
+
 let soundButton = document.getElementById("sound-btn");
 soundButton.addEventListener('click', addSound);
 
 function addSound() {
-
   if (soundOn === false) {
     soundButton.innerHTML = `<i class="fas fa-volume-up"></i>`;
   } else {
@@ -223,12 +224,14 @@ function addSound() {
 }
 
 let gameSound = document.getElementById("game-sound");
-gameSound.addEventListener(click, playAudio);
 
-function playAudio(){
-  if (soundOn === false) {
+soundButton.addEventListener('click', playAudio);
+
+function playAudio() {
+
+  if (soundOn === !false) {
     gameSound.play();
   } else {
-    gameSound.onpause();
+    gameSound.pause();
   }
 }
