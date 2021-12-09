@@ -58,7 +58,7 @@ body {
     background-repeat: no-repeat;
     font-family: Orbitron;
     text-transform: uppercase;
-    background-image: url(/assests/images/rock-paper-scissors-background-image.png);
+    background-image: url(../images/rock-paper-scissors-background-image.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
