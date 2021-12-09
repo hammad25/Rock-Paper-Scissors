@@ -9,6 +9,8 @@ let loseModal = document.getElementById("lose-modal");
 let gameWonModal = document.getElementById("gamewon-modal");
 let gameLostModal = document.getElementById("gamelost-modal");
 let losingSound = document.getElementById("losing-sound");
+let gamewonSound=document.getElementById("won-sound");
+
 let finalRoundSelection = false;
 let isFinalRound = false;
 let soundOn = false;
@@ -148,6 +150,7 @@ function trackRound() {
     if (event.target == gameWonModal) {
       if (isFinalRound === true) {
         location.reload();
+        gamewonSound.pause();
       }
 
     } else if (event.target == gameLostModal) {
@@ -182,13 +185,15 @@ function losingModal() {
 function gameWon() {
   let gameWonModal = document.getElementById("gamewon-modal");
   gameWonModal.style.display = "block";
+
+  gamewonSound.play();
+  gamewonSound.loop=true;
 }
 
 function gameLost() {
   let gameLostModal = document.getElementById("gamelost-modal");
   gameLostModal.style.display = "block";
 
-  let losingSound = document.getElementById("losing-sound");
   losingSound.play();
 }
 
