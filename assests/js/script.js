@@ -54,10 +54,10 @@ for (let button of buttons) {
  * and generates a random computer response from the weapons array
  */
 function playGame(playerWeapon) {
-  playerImage.src = `assests/images/${playerWeapon}-control-button.png`;
+  playerImage.src = `./assests/images/${playerWeapon}-control-button.png`;
   let enemyWeapon = weapons[Math.floor(Math.random() * weapons.length)];
 
-  enemyImage.src = `assests/images/${enemyWeapon}-control-button.png`;
+  enemyImage.src = `./assests/images/${enemyWeapon}-control-button.png`;
 
   checkWinner(playerWeapon, enemyWeapon);
   trackRound();
