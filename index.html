@@ -25,7 +25,7 @@
     <div class="game-background">
 
         <!--Trigger rules modal-->
-        <button class="style-btn" id="rules-button">Rules <i class="fas fa-space-shuttle"></i></button>
+        <div class="style-btn" id="rules-button">Rules <i class="fas fa-space-shuttle"></i></div>
         <!--Rules Modal-->
         <div id="rules-modal" class="style-modal">
             <div class="modal-content">
@@ -45,9 +45,9 @@
             Rock Paper Scissors
         </h1>
 
-        <div class="sound">
-            <i id="sound-btn"  class="fas fa-volume-mute"></i>
-            <audio src="./assests/audio/space-rps-audio.mp3" preload id="game-sound"></audio>
+        <div id="sound-btn" class="sound">
+            <i class="fas fa-volume-mute"></i>
+            <audio id="game-sound" src="./assests/audio/space-rps-audio.mp3"  preload ></audio>
         </div>
 
         <div class="game-area">
@@ -140,11 +140,11 @@
             </div>
         </div>
 
-
-
-
-
     </div>
+
+    <!--Audio-->
+    <audio id="weapon-sound" src="assests/audio/button-sound.mp3" preload></audio>
+    <audio id="losing-sound" src="assests/audio/losing-sound.mp3" prelpad></audio>
 
 
 

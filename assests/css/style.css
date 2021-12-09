@@ -83,6 +83,8 @@ body {
     float: right;
     margin: -49px 8%;
     font-size: 35px;
+    text-shadow: 2px 1px rgb(69, 146, 18);
+
 }
 
 .game-area {
@@ -97,13 +99,16 @@ body {
 .style-btn {
     font-family: 'Orbitron';
     text-transform: uppercase;
-    margin: 13px 10px 0px 10px;
+    margin: 18px 10px 0px 10px;
     width: 128px;
-    height: 45px;
+    height: 38px;
     position: absolute;
     font-size: 22px;
-    box-shadow: 10px 10px 20px 0px rgb(0, 0, 0);
+    background-color: white;
+    color: black;
+    box-shadow: 10px 10px 20px 0px rgb(64, 146, 18);
     text-shadow: 1px 1px rgb(69, 146, 18);
+    text-align: -webkit-center;
 }
 
 

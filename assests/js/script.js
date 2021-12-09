@@ -8,6 +8,7 @@ let winnerModal = document.getElementById("winner-modal");
 let loseModal = document.getElementById("lose-modal");
 let gameWonModal = document.getElementById("gamewon-modal");
 let gameLostModal = document.getElementById("gamelost-modal");
+let losingSound = document.getElementById("losing-sound");
 let finalRoundSelection = false;
 let isFinalRound = false;
 let soundOn = false;
@@ -39,6 +40,11 @@ for (let button of buttons) {
     finalRoundSelection = true;
     playGame(playerWeapon);
   });
+
+  let weaponSound = document.getElementById("weapon-sound");
+  button.addEventListener('click', function () {
+    weaponSound.play();
+  })
 }
 
 /**
@@ -136,6 +142,7 @@ function trackRound() {
     } else if (event.target == loseModal) {
       loseModal.style.display = "none";
       resetFunction()
+
     }
 
     if (event.target == gameWonModal) {
@@ -157,6 +164,9 @@ function trackRound() {
 function winningModal() {
   let winnerModal = document.getElementById("winner-modal");
   winnerModal.style.display = "block";
+
+  let winningSound = document.getElementById("winning-sound");
+  winningSound.play();
 }
 
 function losingModal() {
@@ -164,6 +174,9 @@ function losingModal() {
   loseModal.style.display = "block"
   document.getElementById("battle-result").textContent = "";
   resetFunction();
+
+  losingSound.play();
+
 }
 
 function gameWon() {
@@ -174,6 +187,9 @@ function gameWon() {
 function gameLost() {
   let gameLostModal = document.getElementById("gamelost-modal");
   gameLostModal.style.display = "block";
+
+  let losingSound = document.getElementById("losing-sound");
+  losingSound.play();
 }
 
 /**
@@ -183,8 +199,13 @@ function resetFunction() {
   document.getElementById("user-score").textContent = 0;
   document.getElementById("enemy-score").textContent = 0;
   finalRoundSelection = false
+
+  losingSound.pause();
 }
 
+/**
+ * Launch Final battle of the game with 5 second timer and pulsing screen
+ */
 function finalRound() {
   finalRoundSelection = false
   isFinalRound = true
@@ -200,6 +221,9 @@ function finalRound() {
 
 }
 
+/**
+ * Function to check when final round not true
+ */
 function checkFinalRound() {
   if (finalRoundSelection === false) {
     addEnemyScore();
@@ -209,10 +233,13 @@ function checkFinalRound() {
 
 
 
-
+//Add sound button
 let soundButton = document.getElementById("sound-btn");
 soundButton.addEventListener('click', addSound);
 
+/**
+ * Function to change sound icon when pressed
+ */
 function addSound() {
   if (soundOn === false) {
     soundButton.innerHTML = `<i class="fas fa-volume-up"></i>`;
@@ -223,14 +250,17 @@ function addSound() {
   soundOn = !soundOn;
 }
 
+//Add sound to game
 let gameSound = document.getElementById("game-sound");
-
 soundButton.addEventListener('click', playAudio);
 
+/**
+ * Play/turn-off sound when soundButton is clicked
+ */
 function playAudio() {
-
   if (soundOn === !false) {
     gameSound.play();
+    gameSound.loop = true;
   } else {
     gameSound.pause();
   }
