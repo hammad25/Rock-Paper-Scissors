@@ -25,10 +25,6 @@ In this project I have taken the classic Rock Paper Scissor game and given it a 
   * [**Gitpod**](#gitpod)
   * [**Github**](#github)
 * [**Credits**](#credits)
-  * [**Honorable mentions:**](#honorable-mentions)
-  * [**General reference:**](#general-reference)
-  * [**Content:**](#content)
-  * [**Media:**](#media)
 
 ## User Stories
 * As a user I want to play Rock Paper Scissor.
@@ -61,7 +57,9 @@ In this project I have taken the classic Rock Paper Scissor game and given it a 
 ## Current Features
 * Rules button, so that any user about to play space RPS is knows how to play the game.
 * Add a sound on and off button to play music to the game background
+
 ![rules](docs/rules-button.png)
+
 * Two display screens one for user weapon and one for computer weapon to be displayed.
 * The outcome of every result to be displayed once that round is played under the display screens.
 * User selection buttons displayed.
@@ -138,5 +136,5 @@ Alternatively, if using Gitpod, you can [click here](https://gitpod.io/#https://
 * Rohit Sharma, my mentor for helping me understand concepts and as always reassuring me to trust the process and digest JavaScript at my own pace and not to compare myself with others.
 * The slack community as always **Dave Horrocks** and **Jack Conroy** for taking out time to help me out.
 * [Balsamiq](https://balsamiq.com/) was used to create the wireframes
-* * [Coolors](https://coolors.co/) - Used to create my colour palette.
+* [Coolors](https://coolors.co/) - Used to create my colour palette.
 * [font Awesome](https://fontawesome.com/) for the variours icons.
