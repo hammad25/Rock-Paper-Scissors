@@ -15,13 +15,6 @@ In this project I have taken the classic Rock Paper Scissor game and given it a 
   * [**Color Scheme:**](#color-scheme)
   * [**Wireframes:**](#wireframes)
 * [**Current Features**](#current-features)
-  * [***Title:***](#title)
-  * [***Rules button***](#rules)
-  * [**Display**](#display)
-  * [**Battle result**](#battle-result)
-  * [**Control panel**](#control-panel)
-  * [***Score area***](#score-area)
-  * [***Modals:***](#modals)
 * [**Technology**](#technology)
     * [**Languages**](#languages)
     * [***Software:***](#software)
@@ -52,14 +45,26 @@ In this project I have taken the classic Rock Paper Scissor game and given it a 
  * The layout is a minimalistic and clean, a spaceship cockpit with user and computer display screens and control panel that represents the user weapon selection.
 
 ### Typography
+![font](docs/font.png)
  * I have used a combination of different styles to convey the theme of space. Using a dark ominous spaceship cockpit background, green highlighted hovering elements i.e display screens and buttons.
  * I also used the font Orbitron very reminesent of the font we have seen and love in the star wars saga.
  * I have also used various galactic solider pngs through out the modals to convey the space storyline.
 
 ### Color Scheme
-* The primary colors were inspired by the game background, emphasising the green.
+* The primary colors were inspired by the game background. I wanted to  emphasise the green since my first introduction to sci-fi was the the 1979 movie Alien.
+
+![design](docs/color-scheme.png)
 
 ### Wireframes
 * [Balsamiq](https://balsamiq.com/) was used to create the wireframes and here are the primary mock ups.
 
 ![Index-Page](docs/space-rps-wireframe.png)
+
+## Current Features
+* Rules button, so that any user about to play space RPS is knows how to play the game.
+![rules](docs/rules-button.png)
+* Two display screens one for user weapon and one for computer weapon to be displayed.
+* The outcome of every result to be displayed once that round is played under the display screens.
+* User selection buttons displayed.
+* score displayed and updating with each round and reseting for the final battle.
+* Pop up modals for different outcomes within the game
