@@ -1,7 +1,7 @@
 # Space Rock Paper Scissors
 * [live link] of the project
 ## Project Overview
-In this project I have taken the classic Rock Paper Scissor game and given it a space theme and storyline. The user i.e the solider, must fire a weapon from his spaceship control panel that consists of **Rock**, **Paper** and **Scissors** which must defeat the enemy, the evil space army and bring peace to the galactic kingdom by winning to two wars. The first war consists of 3 battle rounds and after winning those the final war, where the user only has 5 seconds to fire his selected weapon determining the fate of the galaxy.
+In this project I have taken the classic Rock Paper Scissor game and given it a space theme and storyline. The user i.e the solider, must fire a weapon from his spaceship control panel that consists of **Rock**, **Paper** and **Scissors**. He must defeat the enemy, the evil space army and bring peace to the galactic kingdom by winning two wars. The first war consists of 3 battle rounds and the second and final war. For the final war the user will only has 5 seconds to fire the selected weapon determining the fate of the galaxy.
 
 ![Demonstration of Site Responsiveness](documentation/readme-responsiveness.png)
 
@@ -36,7 +36,7 @@ In this project I have taken the classic Rock Paper Scissor game and given it a 
 
 ## Design
 ### Layout
- * The layout is a minimalistic and clean, a spaceship cockpit with user and computer display screens and control panel that represents the user weapon selection.
+ * The layout is minimalistic and clean. A spaceship cockpit with user and computer display screens and control panel that represents the user weapon selection.
 
 ### Typography
 ![font](docs/font.png)
@@ -55,19 +55,19 @@ In this project I have taken the classic Rock Paper Scissor game and given it a 
 ![Index-Page](docs/space-rps-wireframe.png)
 
 ## Current Features
-* Rules button, so that any user about to play space RPS is knows how to play the game.
-* Add a sound on and off button to play music to the game background
+* Rules button, so that any user about to play space RPS knows how to play the game.
+* Add a sound on and off button to play music for the game background
 
 ![rules](docs/rules-button.png)
 
-* Two display screens one for user weapon and one for computer weapon to be displayed.
+* Two display screens one for user choice and one for computer choice to be displayed.
 * The outcome of every result to be displayed once that round is played under the display screens.
 * User selection buttons displayed.
-* score displayed and updating with each round and reseting for the final battle.
+* Score displayed and updating with each round and reseting for the final battle.
 * Pop up modals for different outcomes within the game
 
 ## Technology
-*  [HTML:](https://www.w3.org/html/)  - HTMl5 provided the content and the structure for the project. HTML was used to build the UI.
+*  [HTML:](https://www.w3.org/html/)  - HTML5 provided the content and the structure for the project. HTML was used to build the UI.
 
 * [CSS:](https://www.w3.org/Style/CSS/) - CSS was used to style.CSS was used to manage the UI.
 
@@ -110,10 +110,14 @@ HTML - [W3C Markup Validation Service](https://validator.w3.org/)
 
 ### Supported Screens
 * Screen sizes 1024px and over are all compatible for the game
-* Only screen sizes ipad, ipad pro and iphone X within Devtools has been to size the game 
+* Only screen sizes ipad, ipad pro and iphone X within Devtools have been used for the responsive size the game.
+
 ipad
+
 ![](docs/ipad.png)
+
 iphone X
+
 ![](docs/iphone.png)
 
 ## Deployment 
