@@ -6,11 +6,9 @@ In this project I have taken the classic Rock Paper Scissor game and given it a 
 ![Demonstration of Site Responsiveness](documentation/readme-responsiveness.png)
 
 ## Table of contents:
-* [**Space Rock Paper Scissors**](#Space Rock Paper Scissors)
-  * [**Project Overview**](#project-overview)
-  * [**Planning Stage**](#planning-stage)
-    * [**Target Audience:**](#target-audience)
-    * [**User Stories:**](#user-stories)
+* [**Space Rock Paper Scissors**](#Space-Rock-Paper-Scissors)
+* [**Project Overview**](#project-overview)
+* [**User stories:**](#user-stories)
 * [**Design**](#design)
   * [**layout**](#layout) 
   * [**Typography**](#typography)  
@@ -41,3 +39,27 @@ In this project I have taken the classic Rock Paper Scissor game and given it a 
   * [**Content:**](#content)
   * [**Media:**](#media)
 
+## User Stories
+* As a user I want to play Rock Paper Scissor.
+* As a user I want to understand the rules of the game.
+* As a user I want to be able to tell if I am winning or losing against the computer.
+* As a user I want to be able to tell what option the computer chose against me.
+* As a user I want to be able to reset the game if I lose.
+* As a user I want to be able to see if I have won or lost the overall game against the computer.
+
+## Design
+### Layout
+ * The layout is a minimalistic and clean, a spaceship cockpit with user and computer display screens and control panel that represents the user weapon selection.
+
+### Typography
+ * I have used a combination of different styles to convey the theme of space. Using a dark ominous spaceship cockpit background, green highlighted hovering elements i.e display screens and buttons.
+ * I also used the font Orbitron very reminesent of the font we have seen and love in the star wars saga.
+ * I have also used various galactic solider pngs through out the modals to convey the space storyline.
+
+### Color Scheme
+* The primary colors were inspired by the game background, emphasising the green.
+
+### Wireframes
+* [Balsamiq](https://balsamiq.com/) was used to create the wireframes and here are the primary mock ups.
+
+![Index-Page](docs/space-rps-wireframe.png)

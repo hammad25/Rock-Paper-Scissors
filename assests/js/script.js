@@ -46,7 +46,7 @@ for (let button of buttons) {
   let weaponSound = document.getElementById("weapon-sound");
   button.addEventListener('click', function () {
     weaponSound.play();
-  });
+  })
 }
 
 /**
@@ -137,13 +137,13 @@ function trackRound() {
   window.onclick = function (event) {
     if (event.target == winnerModal) {
       winnerModal.style.display = "none";
-      let gameFinalRound = isFinalRound;
-      resetFunction();
-      finalRound();
+      let gameFinalRound = isFinalRound
+      resetFunction()
+      finalRound()
 
     } else if (event.target == loseModal) {
       loseModal.style.display = "none";
-      resetFunction(;)
+      resetFunction()
 
     }
 
@@ -159,7 +159,7 @@ function trackRound() {
 
       }
     }
-  };
+  }
 
 }
 
@@ -174,7 +174,7 @@ function winningModal() {
 
 function losingModal() {
   let loseModal = document.getElementById("lose-modal");
-  loseModal.style.display = "block";
+  loseModal.style.display = "block"
   document.getElementById("battle-result").textContent = "";
   resetFunction();
 
@@ -203,7 +203,7 @@ function gameLost() {
 function resetFunction() {
   document.getElementById("user-score").textContent = 0;
   document.getElementById("enemy-score").textContent = 0;
-  finalRoundSelection = false;
+  finalRoundSelection = false
 
   losingSound.pause();
 }
@@ -212,8 +212,8 @@ function resetFunction() {
  * Launch Final battle of the game with 5 second timer and pulsing screen
  */
 function finalRound() {
-  finalRoundSelection = false;
-  isFinalRound = true;
+  finalRoundSelection = false
+  isFinalRound = true
 
   document.getElementById("battle-result").textContent = "";
   let finalRoundText = document.getElementById("final-round");
