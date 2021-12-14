@@ -45,6 +45,7 @@ for (let button of buttons) {
 
   let weaponSound = document.getElementById("weapon-sound");
   button.addEventListener('click', function () {
+    weaponSound.currentTime=0;
     weaponSound.play();
   })
 }
