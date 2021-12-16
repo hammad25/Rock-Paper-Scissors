@@ -9,7 +9,7 @@ let loseModal = document.getElementById("lose-modal");
 let gameWonModal = document.getElementById("gamewon-modal");
 let gameLostModal = document.getElementById("gamelost-modal");
 let losingSound = document.getElementById("losing-sound");
-let gamewonSound=document.getElementById("won-sound");
+let gamewonSound = document.getElementById("won-sound");
 
 let finalRoundSelection = false;
 let isFinalRound = false;
@@ -45,7 +45,7 @@ for (let button of buttons) {
 
   let weaponSound = document.getElementById("weapon-sound");
   button.addEventListener('click', function () {
-    weaponSound.currentTime=0;
+    weaponSound.currentTime = 0;
     weaponSound.play();
   })
 }
@@ -188,7 +188,7 @@ function gameWon() {
   gameWonModal.style.display = "block";
 
   gamewonSound.play();
-  gamewonSound.loop=true;
+  gamewonSound.loop = true;
 }
 
 function gameLost() {
@@ -254,18 +254,22 @@ function addSound() {
   }
 
   soundOn = !soundOn;
+  playAudio();
+
 }
 
 //Add sound to game
 let gameSound = document.getElementById("game-sound");
-soundButton.addEventListener('click', playAudio);
+
 
 /**
  * Play/turn-off sound when soundButton is clicked
  */
 function playAudio() {
   if (soundOn === !false) {
-    gameSound.play();
+    setTimeout(function () {
+      gameSound.play();
+    }, 100);
     gameSound.loop = true;
   } else {
     gameSound.pause();
