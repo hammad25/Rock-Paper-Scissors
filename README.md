@@ -108,6 +108,10 @@ HTML - [W3C Markup Validation Service](https://validator.w3.org/)
 - Document checking completed. No errors or warnings to show.
 ![](docs/html-validator.png)
 
+### Fixed bugs
+* When the selected weapon button was pressed the audio would not play again if pressed again until the audio had finished playing the whole sound.
+* To solve this issue I added currentTime = 0 to the variable weaponSound, this resulted in the audio playing instantly every time the button was selected.
+
 ### Supported Screens
 * Screen sizes 1024px and over are all compatible for the game
 * Only screen sizes ipad, ipad pro and iphone X within Devtools have been used for the responsive size the game.
