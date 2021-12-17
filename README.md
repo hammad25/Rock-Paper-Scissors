@@ -3,7 +3,7 @@
 ## Project Overview
 In this project I have taken the classic Rock Paper Scissor game and given it a space theme and storyline. The user i.e the solider, must fire a weapon from his spaceship control panel that consists of **Rock**, **Paper** and **Scissors**. He must defeat the enemy, the evil space army and bring peace to the galactic kingdom by winning two wars. The first war consists of 3 battle rounds and the second and final war. For the final war the user will only has 5 seconds to fire the selected weapon determining the fate of the galaxy.
 
-![Demonstration of Site Responsiveness](documentation/readme-responsiveness.png)
+![Demonstration of Site Responsiveness](documentation/docs/responsive.png)
 
 ## Table of contents:
 * [**Space Rock Paper Scissors**](#Space-Rock-Paper-Scissors)
@@ -80,16 +80,23 @@ In this project I have taken the classic Rock Paper Scissor game and given it a 
 ## Testing
 ### Test cases
 Through out the project I have carried out regular testing. Through console.log and Chrome developer tools.
-* Play **Space Rock Paper Scissor**
+* Play **Space Rock Paper Scissor** with a space solider storyline.
 ![space](docs/space-rps-readme.png)
-* Understand the game rules
+
+* Understand the game rules by presseing the **Rules** button on the top left which opens the game rules.
 ![rules](docs/rules-modal.readme.png)
-* Userr to be able to tell battle round outcomes
+
+* User to be able to tell battle round outcomes as scores increment respectively for user and computer.
 ![score](docs/scores-readme.png)
 ![space](docs/game-result.png)
-* Modals to navigate the outcome and result game
+
+* When the computer wins the 1st war by winning the 3 battle rounds the **YOU LOST** modal pops up 
 ![losing](docs/losing-modal.png)
+
+* when the user wins the 1st war by winning the 3 battle round the **WELL DONE SOLIDER** modal pops up
 ![space](docs/winning-modal.png)
+
+* When the user either loses or wins the final war the respective modal pop us. Also giving instructions to reset the game
 ![space](docs/gamelost-modal.png)
 ![space](docs/gamewon-modal.png)
 
@@ -134,11 +141,13 @@ The project was deployed to GitHub pages using the following steps:
   5. To see your published site, under **GitHub Pages**, click the site's URL.
 
 ### GitPod
-In order to make a local copy of this application, you can clone it by typing the following command in your IDE Terminal:
+* In order to make a local copy of this application, you can clone it by typing the following command in your IDE Terminal:
 
 - `git clone https://github.com/hammad25/Space-RPS.git`
 
 Alternatively, if using Gitpod, you can [click here](https://gitpod.io/#https://github.com/hammad25/Space-RPS) to start a new Gitpod workspace on your account.
+
+* In the terminal command line "python3 -m http.server" then click open browser.
 
 ## Credits
 * Rohit Sharma, my mentor for helping me understand concepts and as always reassuring me to trust the process and digest JavaScript at my own pace and not to compare myself with others.

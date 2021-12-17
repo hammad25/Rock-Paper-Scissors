@@ -25,6 +25,7 @@
 </head>
 
 <body>
+    <!--main game background-->
     <div class="game-background">
 
         <!--Trigger rules modal-->
@@ -45,18 +46,19 @@
             </div>
         </div>
 
-
+        <!--main heading-->
         <h1 class="heading">
             Rock Paper Scissors
         </h1>
 
+        <!--game background sound button-->
         <div id="sound-btn" class="sound">
             <i class="fas fa-volume-mute"></i>
-            <audio id="game-sound" src="./assests/audio/space-rps-audio.mp3" preload="auto" ></audio>
+            <audio id="game-sound" src="./assests/audio/space-rps-audio.mp3" preload="auto"></audio>
         </div>
 
+        <!--game display area for selected weapon button-->
         <div class="game-area">
-
             <div class="display display-blue" id="user">
                 <img class="display-img img" id="player-image" src="assests/images/rock-control-button.png"
                     alt="Rock Paper Scissors">
@@ -66,15 +68,16 @@
                 <img class="display-img img" id="enemy-image" src="assests/images/paper-control-button.png"
                     alt="Rock Paper Scissors">
             </div>
-
         </div>
 
+        <!--display round results-->
         <div class="vs">
             <h2>VS</h2>
             <p class="result" id="battle-result"></p>
         </div>
 
-
+ 
+        <!-- game buttons-->
         <div class="control-panel">
 
             <button data-type="rock" class="button button-red">
@@ -91,6 +94,7 @@
 
         </div>
 
+        <!--display user and computer score-->
         <div class="score-area">
             <div class="user-score">
                 <p class="score">WINS <span class="result-score" id="user-score">0</span></p>
@@ -103,6 +107,7 @@
             </div>
         </div>
 
+        <!--game modals-->
         <div class="modals" id="winner-modal">
             <div> <img src="./assests/images/space-commander.png" alt="Space army commander"></div>
             <div>
@@ -152,6 +157,7 @@
 
 
 
+    <!--javascript-->
     <script src="assests/js/script.js"></script>
 </body>
 

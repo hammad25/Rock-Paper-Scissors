@@ -1,7 +1,7 @@
 //Variables
 let modal = document.getElementById("rules-modal");
 let buttons = document.getElementsByTagName("button");
-let weapons = ["rock", "paper", "scissor"]
+let weapons = ["rock", "paper", "scissor"];
 let playerImage = document.getElementById("player-image");
 let enemyImage = document.getElementById("enemy-image");
 let winnerModal = document.getElementById("winner-modal");
@@ -10,7 +10,7 @@ let gameWonModal = document.getElementById("gamewon-modal");
 let gameLostModal = document.getElementById("gamelost-modal");
 let losingSound = document.getElementById("losing-sound");
 let gamewonSound = document.getElementById("won-sound");
-
+let gameSound = document.getElementById("game-sound");
 let finalRoundSelection = false;
 let isFinalRound = false;
 let soundOn = false;
@@ -37,18 +37,27 @@ function closeModal() {
  * Add event listener to the user control button
  */
 for (let button of buttons) {
-  button.addEventListener('click', function () {
+  button.addEventListener('click', controlButton);
+  button.addEventListener('click', buttonSound);
+}
+
+
+/**
+ * Call audio everytime weapon button is pressed
+ */
+function buttonSound() {
+  let weaponSound = document.getElementById("weapon-sound");
+  weaponSound.currentTime = 0;
+  weaponSound.play();
+}
+
+function controlButton () {
     let playerWeapon = this.getAttribute('data-type');
     finalRoundSelection = true;
     playGame(playerWeapon);
-  });
+  }
 
-  let weaponSound = document.getElementById("weapon-sound");
-  button.addEventListener('click', function () {
-    weaponSound.currentTime = 0;
-    weaponSound.play();
-  })
-}
+
 
 /**
  * This is for the main game functionality, takes the data-type value parameter of the selected user button 
@@ -138,13 +147,13 @@ function trackRound() {
   window.onclick = function (event) {
     if (event.target == winnerModal) {
       winnerModal.style.display = "none";
-      let gameFinalRound = isFinalRound
-      resetFunction()
-      finalRound()
+      let gameFinalRound = isFinalRound;
+      resetFunction() ;
+      finalRound() ;
 
     } else if (event.target == loseModal) {
       loseModal.style.display = "none";
-      resetFunction()
+      resetFunction();
 
     }
 
@@ -160,7 +169,7 @@ function trackRound() {
 
       }
     }
-  }
+  };
 
 }
 
@@ -175,7 +184,7 @@ function winningModal() {
 
 function losingModal() {
   let loseModal = document.getElementById("lose-modal");
-  loseModal.style.display = "block"
+  loseModal.style.display = "block";
   document.getElementById("battle-result").textContent = "";
   resetFunction();
 
@@ -204,7 +213,7 @@ function gameLost() {
 function resetFunction() {
   document.getElementById("user-score").textContent = 0;
   document.getElementById("enemy-score").textContent = 0;
-  finalRoundSelection = false
+  finalRoundSelection = false ;
 
   losingSound.pause();
 }
@@ -213,8 +222,8 @@ function resetFunction() {
  * Launch Final battle of the game with 5 second timer and pulsing screen
  */
 function finalRound() {
-  finalRoundSelection = false
-  isFinalRound = true
+  finalRoundSelection = false ;
+  isFinalRound = true ;
 
   document.getElementById("battle-result").textContent = "";
   let finalRoundText = document.getElementById("final-round");
@@ -258,15 +267,12 @@ function addSound() {
 
 }
 
-//Add sound to game
-let gameSound = document.getElementById("game-sound");
-
 
 /**
  * Play/turn-off sound when soundButton is clicked
  */
 function playAudio() {
-  if (soundOn === !false) {
+  if (soundOn === true) {
     setTimeout(function () {
       gameSound.play();
     }, 100);
