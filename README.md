@@ -1,5 +1,5 @@
 # Space Rock Paper Scissors
-* (Live Link)[https://hammad25.github.io/Space-RPS/] of the project
+* ![Live Link](https://hammad25.github.io/Space-RPS/) of the project
 ## Project Overview
 In this project I have taken the classic Rock Paper Scissor game and given it a space theme and storyline. The user i.e the solider, must fire a weapon from his spaceship control panel that consists of **Rock**, **Paper** and **Scissors**. He must defeat the enemy, the evil space army and bring peace to the galactic kingdom by winning two wars. The first war consists of 3 battle rounds and the second and final war. For the final war the user will only has 5 seconds to fire the selected weapon determining the fate of the galaxy.
 
