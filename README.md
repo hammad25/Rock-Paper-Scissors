@@ -105,6 +105,11 @@ Through out the project I have carried out regular testing. Through console.log 
 Snyk - [Snyk](https://snyk.io/) 
 ![](docs/js-validator.png)
 
+#### JSHint Static Code Analysis
+JSHint - [JSHint Static Code Analysis](https://jshint.com/) 
+![](docs/jshint.png)
+
+
 #### CSS Markup Validation 
 CSS - [W3C Markup Validation Service](https://validator.w3.org/) 
 - Congratulations! No Error Found.

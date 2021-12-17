@@ -51,11 +51,14 @@ function buttonSound() {
   weaponSound.play();
 }
 
-function controlButton () {
-    let playerWeapon = this.getAttribute('data-type');
-    finalRoundSelection = true;
-    playGame(playerWeapon);
-  }
+/**
+ * selects the user weapon button and starts the game
+ */
+function controlButton() {
+  let playerWeapon = this.getAttribute('data-type');
+  finalRoundSelection = true;
+  playGame(playerWeapon);
+}
 
 
 
@@ -148,8 +151,8 @@ function trackRound() {
     if (event.target == winnerModal) {
       winnerModal.style.display = "none";
       let gameFinalRound = isFinalRound;
-      resetFunction() ;
-      finalRound() ;
+      resetFunction();
+      finalRound();
 
     } else if (event.target == loseModal) {
       loseModal.style.display = "none";
@@ -213,7 +216,7 @@ function gameLost() {
 function resetFunction() {
   document.getElementById("user-score").textContent = 0;
   document.getElementById("enemy-score").textContent = 0;
-  finalRoundSelection = false ;
+  finalRoundSelection = false;
 
   losingSound.pause();
 }
@@ -222,8 +225,8 @@ function resetFunction() {
  * Launch Final battle of the game with 5 second timer and pulsing screen
  */
 function finalRound() {
-  finalRoundSelection = false ;
-  isFinalRound = true ;
+  finalRoundSelection = false;
+  isFinalRound = true;
 
   document.getElementById("battle-result").textContent = "";
   let finalRoundText = document.getElementById("final-round");
